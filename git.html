@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="light">Light Mode</button>
+    <button id="dark">Dark Mode</button>
+    <h2>My First JavaScript</h2>
+    <button class="date" id="button">Click here to display <span style="color:red;">Date & Time</span></button>
+    <p id="demo">Hello World</p>
+    <p>HTML- content of the web page</p>
+    <p>CSS- Layout of the webpage</p>
+    <p>JS- behaviour of the web page</p>
+    <p>JavaScript is the programming language of the web. It can update and change both html and css. It can manipulate and validate data</p>
+    <hr>
+    <h2>JavaScript can change Html content</h2>
+    <h4 id="color">This color is red</h4>
+     <button onclick="document.getElementById('color').style.color='blue'">Click here to change the <span style="color:red;">color</span></button> 
+     <h2>JavaScript can change HTML Attribute values </h2>
+     <img id="bulb" src="./images/yellow.jpg" alt="">
+     <button id="blb1" type="button" onclick="document.getElementById('bulb').src='./images/white.jpg'">Light the Bulb</button>
+     <button id="blb2" onclick="document.getElementById('bulb').src='./images/yellow.jpg'">Switch of the Bulb</button>
+    <script>
+        const light = document.getElementById('light');
+        const dark = document.getElementById('dark');
+        const button= document.getElementById('button');
+        light.addEventListener("click", () =>{
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color= 'black'
+        })
+        dark.addEventListener("click",() =>{
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+        })
+        const demo= document.getElementById('demo');
+        button.addEventListener("click" ,()=>{
+            demo.innerText= Date();
+        })
+        // const color = document.getElementById('color');
+        // color.addEventListener("click" , () =>{
+        //     document.style.color = 'red';
+        //     document.style.color = 'green';
+        // })
+    </script>
+</body>
+</html>
